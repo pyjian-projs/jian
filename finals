@@ -1,0 +1,59 @@
+print("_" * 60)
+import time
+
+
+BLUE = "\033[94m"
+RESET = "\033[0m"
+
+
+def narrator(text):
+   for letter in text:
+       print(letter, end="", flush=True)
+       time.sleep(0.001)
+   print()
+   time.sleep(0.5)
+
+
+narrator("                        Hello everyone!")
+narrator("                        My name is Jian")
+narrator("                 Welcome to my Python Tutorial.")
+narrator("         Today, we will be learning the basics of Python.")
+narrator("                          Let's begin!")
+print("_" * 60)
+narrator("1. Starting with the printing Output.")
+print("_" * 60)
+narrator('Type: print("Hello World!")')
+print("_" * 60)
+typ = input("1 ")
+
+
+while typ != 'print("Hello World!")':
+   print("Error!")
+   print("Try again!")
+   print("_" * 60)
+   typ = input("1 ")
+
+
+print("_" * 30)
+print("Output: ")
+print("Hello World!")
+print("_" * 30)
+print("Correct!")
+print("_" * 30)
+narrator("Let's asses each statement and their functions inside the code.")
+narrator('The "' + BLUE + 'print' + RESET + '" is the function that displays the output')
+narrator('The "' + BLUE + '()' + RESET + '" is the foundation of information')
+narrator('While the ' + BLUE + '"' + RESET + ' or the double quotation encloses the information')
+narrator("Note that Python is a case sensitive!")
+print("_" * 30)
+print("For Example: ")
+narrator("Try typing the 'print' function as its first letter is Capital")
+tut = input("1 ")
+if tut == 'Print("Hello World!")':
+    print("_" * 60)
+    print("Incorrect")
+    while tut == 'Print("Hello World!")':
+        print("Try Again")
+        tut = input("1 ")
+elif tut == 'print("Hello World!")':
+    print("Hello World!")
